@@ -1,30 +1,16 @@
 //
-// main.cpp for korean_teacher in /home/aracthor/programs/projects/korean_teacher
+// main.cpp for paranoidRM in /home/aracthor/programs/projects/paranoidRM
 // 
-// Made by aracthor
+// Made by Aracthor
 // Login   <aracthor@epitech.net>
 // 
-// Started on  Mon Mar  2 15:48:36 2015 aracthor
-// Last Update Mon Mar  2 15:50:06 2015 aracthor
+// Started on  Mon Jun  8 19:48:06 2015 Aracthor
+// Last Update Mon Jun  8 19:53:07 2015 Aracthor
 //
 
-#include <exception>
-#include <iostream>
+#include "RM.hh"
 
-int	main()
+int	main(int argc, const char** argv)
 {
-  int	returnValue;
-
-  try
-    {
-      // TODO
-      returnValue = 0;
-    }
-  catch (const std::exception& exception)
-    {
-      std::cerr << "FATAL ERROR: " << exception.what() << std::endl;
-      returnValue = 1;
-    }
-
-  return (returnValue);
+  return (ShellCommand::main<RM>(argc, argv));
 }
