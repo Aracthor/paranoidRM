@@ -5,7 +5,7 @@
 // Login   <aracthor@epitech.net>
 // 
 // Started on  Mon Jun  8 19:37:38 2015 Aracthor
-// Last Update Mon Jun  8 21:43:31 2015 Aracthor
+// Last Update Tue Jun  9 12:11:03 2015 Aracthor
 //
 
 #ifndef SHELL_COMMAND_HH_
@@ -32,7 +32,7 @@ public:
 
 public:
   void		parseArgs(int argc, const char** argv);
-  virtual void	run();
+  virtual int	run();
   void		printUsage() const throw();
   void		stop();
   inline bool	isRunning() const;
@@ -40,6 +40,8 @@ public:
 protected:
   void		addOption(OptionParser* option);
   virtual void	onUnrequestedArg(const char* arg);
+  inline const char*	getBinaryName() const;
+  inline const char*	getUsage() const;
 
 private:
   void		parseLongOption(const char* name);

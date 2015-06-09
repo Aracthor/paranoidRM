@@ -5,7 +5,7 @@
 // Login   <aracthor@epitech.net>
 // 
 // Started on  Mon Jun  8 19:37:35 2015 Aracthor
-// Last Update Mon Jun  8 21:51:56 2015 Aracthor
+// Last Update Tue Jun  9 13:17:49 2015 Aracthor
 //
 
 #include <iostream>
@@ -37,7 +37,7 @@ ShellCommand::parseArgs(int argc, const char** argv)
   mArgWaiter = NULL;
   mRunning = true;
 
-  for (i = 0; i < argc && mRunning; ++i)
+  for (i = 1; i < argc && mRunning; ++i)
     {
       this->parseArg(argv[i]);
     }
@@ -45,18 +45,19 @@ ShellCommand::parseArgs(int argc, const char** argv)
     throw ArgumentException("Missing argument for option ", mArgWaiter->getName());
 }
 
-void
+int
 ShellCommand::run()
 {
+  return (0);
 }
 
 void
 ShellCommand::printUsage() const throw()
 {
-  std::cerr << "Usage: " << mBinaryName << ' ' << mUsage << std::endl << std::endl;
+  std::cout << "Usage: " << mBinaryName << ": " << mUsage << std::endl << std::endl;
   for (Options::const_iterator it = mOptions.begin(); it != mOptions.end(); ++it)
     {
-      std::cerr << '-' << (*it)->getFlag() << ": " << (*it)->getName() << std::endl;
+      std::cout << '-' << (*it)->getFlag() << ": " << (*it)->getName() << std::endl;
     }
 }
 

@@ -5,7 +5,7 @@
 ## Login   <bonnet_v@epitech.net>
 ## 
 ## Started on  Wed Apr  2 09:29:38 2014 Bonnet Vivien
-## Last Update Mon Jun  8 21:53:43 2015 Aracthor
+## Last Update Tue Jun  9 13:19:31 2015 Aracthor
 ##
 
 CXX=		g++
@@ -23,6 +23,7 @@ NAME=		rm
 BINARY=		$(BIN_DIR)$(NAME)
 
 SRC=		ArgumentException.cpp	\
+		BooleanOption.cpp	\
 		HelpOption.cpp		\
 		ListShellCommand.cpp	\
 		OptionParser.cpp	\
@@ -37,7 +38,8 @@ OBJS=		$(SRCS:$(SRCS_DIR)%.cpp=$(OBJS_DIR)%.o)
 
 CXXFLAGS=	-Wall -Wextra -Werror	\
 		-ansi -pedantic		\
-		-I $(INC_DIR) -g3
+		-I $(INC_DIR)		\
+		-O2
 
 LIBS=
 

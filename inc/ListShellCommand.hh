@@ -5,7 +5,7 @@
 // Login   <aracthor@epitech.net>
 // 
 // Started on  Mon Jun  8 21:12:00 2015 Aracthor
-// Last Update Mon Jun  8 21:20:19 2015 Aracthor
+// Last Update Tue Jun  9 11:31:56 2015 Aracthor
 //
 
 #ifndef LIST_SHELL_COMMAND_HH_
@@ -25,11 +25,11 @@ public:
   virtual ~ListShellCommand();
 
 public:
-  void	run();
+  int	run();
 
 protected:
   void		onUnrequestedArg(const char* arg);
-  virtual void	runForArgument(const char* arg) = 0;
+  virtual int	runForArgument(const char* arg) = 0;
 
 private:
   Arguments	mArguments;
